@@ -111,6 +111,7 @@ const Table = styled.table`
   position: absolute;
   top: 50px;
   left: 40px;
+  scroll-behavior: smooth;
   
   &::-webkit-scrollbar {
     width: 5px;

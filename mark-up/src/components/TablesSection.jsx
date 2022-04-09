@@ -111,6 +111,7 @@ const SectionFooter = styled.div`
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  padding-bottom: 10px;
 `
 const AlwaysVisible = styled.p`
   font-size: 13px;
@@ -127,7 +128,7 @@ const Swap = styled.div`
 const Span = styled.span`
   //display: none;
   margin: 0 10px;
-  padding: 0 0px 5px 0px;
+  padding: 0 10px 5px 10px;
   font-size: 13px;
   color: #FFFFFF70;
   font-weight: 100;

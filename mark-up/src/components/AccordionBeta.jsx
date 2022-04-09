@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { termsAndConditions } from '../data';
 import styled from 'styled-components';
+import Arrow from  "../assets/tab-slider-arrow-r.png"
 
 const AccordionSection = styled.div`
   display: flex;
@@ -54,6 +55,15 @@ const Dropdown = styled.div`
   }
 `;
 
+const Arrowdown = styled.img`
+  margin-right: 20px;
+  transform: rotate(90deg);
+`
+const Arrowup = styled.img`
+  margin-right: 20px;
+  transform: rotate(270deg);
+`
+
 const AccordionBeta = () => {
   const [clicked, setClicked] = useState(false);
 
@@ -73,7 +83,10 @@ const AccordionBeta = () => {
                     <>
                     <Wrap onClick={() => toggle(index)} key={index}>
                         <h1>{item.question}</h1>
-                        <span>{clicked === index ? "-" : "+"}</span>
+                        <span>{clicked === index ? <Arrowup src={Arrow}/> : <Arrowdown src={Arrow}/>}</span>
+                        
+                        
+                        {/* <span>{clicked === index ? "-" : "+"}</span> */}
                     </Wrap>
                     {clicked === index ? (
                         <Dropdown>
